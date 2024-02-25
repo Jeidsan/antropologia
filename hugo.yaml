@@ -1,0 +1,85 @@
+theme: lotusdocs
+baseURL: /
+languageCode: en-GB
+contentDir: content
+enableEmoji: yes
+enableGitInfo: yes
+defaultContentLanguage: en
+languages:
+  de:
+    contentDir: content/de
+    languageName: Deutsch
+    title: Lotus Docs Beispiel Site
+    weight: 30
+  en:
+    languageName: English
+    title: Lotus Docs Example Site
+    weight: 10
+  fr:
+    contentDir: content/fr
+    languageName: Français
+    title: Lotus Docs Exemple de Site
+    weight: 20
+module:
+  hugoVersion:
+    extended: yes
+    min: 0.100.0
+  imports:
+    - disable: no
+      path: github.com/colinwilson/lotusdocs
+    - disable: no
+      path: github.com/gohugoio/hugo-mod-bootstrap-scss/v5
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    renderer:
+      unsafe: yes
+  tableOfContents:
+    endLevel: 3
+    startLevel: 1
+params:
+  analytics: {}
+  docs:
+    backToTop: yes
+    breadcrumbs: yes
+    darkMode: yes
+    descriptions: yes
+    editPage: yes
+    intLinkTooltip: yes
+    lastMod: yes
+    lastModRelative: yes
+    listDescTrunc: 100
+    navDesc: yes
+    navDescTrunc: 30
+    prism: yes
+    prismTheme: solarized-light
+    repoBranch: release
+    repoURL: https://github.com/colinwilson/lotusdocs.dev
+    scrollSpy: yes
+    sidebarIcons: yes
+    title: Lotus Docs Example Site
+    titleIcon: yes
+    toc: yes
+    tocMobile: yes
+  docsearch: {}
+  flexsearch:
+    enabled: yes
+  footer:
+    copyright: '© :YEAR: Lotus Labs. Built with [**Lotus Docs**](https://github.com/colinwilson/lotusdocs)'
+  google_fonts:
+    - - Inter
+      - 300, 400, 600, 700
+    - - Fira Code
+      - 500, 700
+  mono_font: Fira Code
+  sans_serif_font: Inter
+  secondary_font: Inter
+  social:
+    github: ''
+    twitter: ''
+menu:
+  primary:
+    - identifier: docs
+      name: Docs
+      url: docs/
+      weight: 10
